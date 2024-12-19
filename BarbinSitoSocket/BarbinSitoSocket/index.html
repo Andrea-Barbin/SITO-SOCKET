@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <!-- Logo del sito -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Titolo sopra i link per schermi piccoli -->
+                <span class="navbar-text text-white fw-bold">
+                    LE SOCKET
+                </span>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="socket.html">Socket</a></li>
+                    <li class="nav-item"><a class="nav-link" href="osi.html">Modello OSI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tcpUdp.html">TCP vs UDP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#titoloGlossario">Glossario</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <div class="position-relative immagine-onda">
+        <!-- Immagine che copre tutta la larghezza -->
+        <img id="immSocket" class="img-fluid w-100 zoom-effect" src="./immaginiHome/socket.png" alt="Patek Philippe">
+        
+        <!-- Div centrato sopra l'immagine -->
+        <div id="parSocket" class="zommaDiv position-absolute top-50 start-50 translate-middle bg-dark bg-opacity-75 text-white p-4 rounded shadow w-75 w-sm-50 w-xxs-30 w-md-25 w-lg-20 mx-3">
+            <h1>Cos'è una Socket?</h1>
+            <p class="text-justify">Una socket è un'interfaccia software che permette a due dispositivi in rete di scambiare dati...</p>
+        </div>
+      </div>
+
+    <div class="position-relative immagine-onda">
+        <!-- Immagine che copre tutta la larghezza -->
+        <img id="immIsoOsi" class="img-fluid w-100 zoom-effect" src="./immaginiHome/modelloOsi.png" alt="Patek Philippe">
+        
+        <!-- Div centrato sopra l'immagine -->
+        <div id="parIsoOsi" class="zommaDiv position-absolute top-50 start-50 translate-middle bg-dark bg-opacity-75 text-white p-4 rounded shadow w-75 w-sm-50 w-xxs-30 w-md-25 w-lg-20 mx-3">
+            <h1>Partendo dalle basi, conosci il modello OSI?</h1>
+            <p class="text-justify">Immagina il modello OSI come un viaggio che i dati fanno attraverso 7 livelli, ognuno con una funzione specifica...</p>
+        </div>
+    </div>
+
+    <div class="position-relative immagine-onda">
+        <!-- Immagine che copre tutta la larghezza -->
+        <img id="immClientServer" class="img-fluid w-100 zoom-effect" src="./immaginiHome/clientServer.png" alt="Patek Philippe">
+        
+        <!-- Div centrato sopra l'immagine -->
+        <div id="parClientServer" class="zommaDiv position-absolute top-50 start-50 translate-middle bg-dark bg-opacity-75 text-white p-3 rounded shadow w-75 w-sm-50 w-xxs-25 w-md-20 w-lg-15 mx-2 fs-5 fs-sm-4">
+            <h1 class="fs-4 fs-sm-3">Cos'è il modello Client-Server?</h1>
+            <p class="text-justify fs-6 fs-sm-5">Il modello client-server è un'architettura di rete in cui un client richiede servizi a un server, il quale risponde elaborando la richiesta. Questo modello è alla base delle comunicazioni web e delle applicazioni online.</p>
+        </div>
+    </div>
+      
+
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <div class="text-center py-5 text-white">
+                <h1 class="sfondoBlu">Benvenuti nel mondo delle socket</h1>
+            </div>        
+
+            <p class="lead sfondoBlu">Un viaggio tra i concetti di base e le tecnologie avanzate per la comunicazione tra dispositivi in rete.</p>
+         
+            <a href="socket.html" class="btn btn-light btn-lg mt-3 text-secondary fw-bold">Scopri di più sulle Socket</a>
+           
+        </div>
+
+    </header>
+    
+    <!-- Contenitore per l'SVG -->
+    <div class="wave-separator">
+        <svg width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M0,0 L100,0 C50,100 50,0 0,100 Z" fill="#3260a8"></path>
+        </svg>
+    </div>
+    
+    <div class="container my-5">
+        <div class="text-center py-5 text-secondary">
+            <h1 id="titoloGlossario">Glossario dei Termini</h1>
+        </div>
+        
+    </div>
+    
+        <hr>
+        <div id="carouselExample" class="carousel slide position-relative my-4 px-3" data-bs-ride="carousel">
+            <div class="carousel-inner d-flex">
+                <!-- Primo contenitore (Modello OSI, TCP/UDP, Protocollo) -->
+                <div class="carousel-item active w-100">
+                    <div class="row mt-4 mx-3">
+                        <div class="zommaDiv col-md-4 mb-4">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <h5 class="card-title">Modello OSI</h5>
+                                    <p class="card-text">Il modello OSI è la base per comprendere la comunicazione nei sistemi di rete.</p>
+                                    <a href="osi.html" class="btn btn-primary fw-bold">Leggi di più</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zommaDiv col-md-4 mb-4">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <h5 class="card-title">TCP e UDP</h5>
+                                    <p class="card-text">Due protocolli fondamentali per la comunicazione: uno affidabile e uno veloce.</p>
+                                    <a href="tcpUdp.html" class="btn btn-primary fw-bold">Scopri le differenze</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zommaDiv col-md-4 mb-4">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <h5 class="card-title">Protocollo</h5>
+                                    <p class="card-text">Un protocollo è un insieme di regole che definiscono come comunicano due o più sistemi.</p>
+                                    <a href="https://it.wikipedia.org/wiki/Protocollo_informatico" target="_blank" class="btn btn-primary fw-bold">Vai al glossario</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Secondo contenitore (Rete, Modello, Indirizzo IP, Numero di Porta) -->
+                <div class="carousel-item w-100">
+                    <div class="row mt-4 mx-3">
+                        <div class="zommaDiv col-md-3 mb-4">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rete</h5>
+                                    <p class="card-text">Il modello OSI è la base per comprendere la comunicazione nei sistemi di rete.</p>
+                                    <a href="osi.html" class="btn btn-primary fw-bold">Leggi di più</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zommaDiv col-md-3 mb-4">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <h5 class="card-title">Modello</h5>
+                                    <p class="card-text">Un modello è una rappresentazione semplificata di un sistema o concetto complesso.</p>
+                                    <a href="https://pages.di.unipi.it/ghelli/bd1/2e3.ModelliProgettazione.pdf" target="_blank" class="btn btn-primary fw-bold">Leggi di più</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zommaDiv col-md-3 mb-4">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <h5 class="card-title">Indirizzo IP</h5>
+                                    <p class="card-text">Un indirizzo IP è un identificatore numerico unico assegnato a un dispositivo in rete.</p>
+                                    <a href="https://it.wikipedia.org/wiki/Indirizzo_IP" target="_blank" class="btn btn-primary fw-bold">Leggi di più</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zommaDiv col-md-3 mb-4">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <h5 class="card-title">Numero di Porta</h5>
+                                    <p class="card-text">Un numero di porta è un identificatore numerico che specifica un'applicazione o servizio in una rete. Va da 0 a 65535.</p>
+                                    <a href="https://it.wikipedia.org/wiki/Porta_(reti)" target="_blank" class="btn btn-primary fw-bold">Leggi di più</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Controlli per il carosello -->
+            <button class="carousel-control-prev position-absolute start-0" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next position-absolute end-0" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        
+        
+        </div>
+        
+        
+    
+    <footer class="footer text-center">
+        <div>
+            <p>&copy; 2024 Sito Realizzato da Barbin Andrea. Tutti i diritti riservati. <br><a href="#immIsoOsi">Torna su</a></p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

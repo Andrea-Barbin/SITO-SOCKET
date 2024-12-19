@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCP E UDP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/styleTcpUdp.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <!-- Logo del sito -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Titolo sopra i link per schermi piccoli -->
+                <span class="navbar-text text-white fw-bold">
+                    LE SOCKET
+                </span>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home e Glossario</a></li>
+                    <li class="nav-item"><a class="nav-link" href="socket.html">Socket</a></li>
+                    <li class="nav-item"><a class="nav-link" href="osi.html">Modello OSI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tcpUdp.html">TCP vs UDP</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row align-items-center">
+            <!-- Colonna dell'immagine (a sinistra) -->
+            <div class="col-lg-6 order-lg-1">
+                <img src="https://www.datocms-assets.com/41207/1627941441-header.jpg?q=60" class="img-fluid" alt="TCP vs UDP">
+            </div>
+    
+            <!-- Colonna del testo (a destra) -->
+            <div class="col-lg-6 order-lg-2">
+                <h1 id="inizioPagina" class="text-center">TCP vs UDP: Analisi Approfondita</h1>
+                <p>Scopri le differenze tecniche, i vantaggi e le limitazioni dei protocolli TCP e UDP, con un focus su come vengono utilizzati nelle applicazioni moderne.</p>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <!-- Introduzione -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Div con testo -->
+            <div class="col-md-6">
+                <h2 class="text-justify mb-4">Introduzione ai Protocolli di Trasporto</h2>
+                <p class="lead text-justify">TCP (Transmission Control Protocol) e UDP (User Datagram Protocol) sono i principali protocolli di trasporto utilizzati nelle reti moderne. Sono responsabili del trasferimento dei dati tra dispositivi su una rete e sono fondamentali per il funzionamento di Internet. Ogni protocollo ha caratteristiche distinte che li rendono adatti a scenari specifici.</p>
+            </div>
+            
+            <!-- Div con iframe del video -->
+            <div class="col-md-6">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/P6WGbV7vxpA" title="YouTube video" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2 class="text-center mb-4">Confronto Dettagliato tra TCP e UDP</h2>
+        <div class="row g-4">
+            <!-- TCP -->
+            <div class="col-md-6">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">TCP: Affidabilità e Connessione</h3>
+                        <p class="card-text">
+                            TCP è un protocollo orientato alla connessione, il che significa che prima di iniziare a trasmettere dati, stabilisce una connessione tra il mittente e il destinatario. TCP garantisce che i dati vengano ricevuti senza errori, nell'ordine giusto, e che ogni pacchetto arrivi a destinazione.
+                        </p>
+                        <p>
+                            TCP utilizza un meccanismo di controllo di flusso per evitare che il mittente invii troppi dati troppo velocemente, e un controllo di errore per verificare che i dati non vengano danneggiati durante il trasferimento. Se viene rilevato un errore, TCP richiede la ritrasmissione del pacchetto.
+                        </p>
+                        <p>
+                            Le applicazioni che richiedono una comunicazione affidabile e ordinata, come il web browsing (HTTP/HTTPS), la posta elettronica (SMTP, IMAP, POP3), e il file transfer (FTP), si basano su TCP per garantire che i dati vengano ricevuti correttamente.
+                        </p>
+                        <p class="card-text"><strong>Caratteristiche principali di TCP:</strong></p>
+                        <ul>
+                            <li><strong>Affidabilità:</strong> Ogni pacchetto è garantito e l'ordine dei pacchetti è rispettato.</li>
+                            <li><strong>Controllo degli errori:</strong> I pacchetti vengono verificati per errori e ritrasmessi se necessario.</li>
+                            <li><strong>Controllo di flusso:</strong> Impedisce che i pacchetti vengano inviati troppo velocemente.</li>
+                            <li><strong>Connessione orientata:</strong> Viene stabilita una connessione tra il mittente e il destinatario prima di trasmettere i dati.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- UDP -->
+            <div class="col-md-6">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">UDP: Velocità e Semplicità</h3>
+                        <p class="card-text">
+                            UDP, al contrario di TCP, è un protocollo non orientato alla connessione, il che significa che i dati possono essere inviati senza che venga stabilita una connessione preventiva. UDP non offre alcuna garanzia che i pacchetti arriveranno correttamente o che arriveranno nell'ordine giusto.
+                        </p>
+                        <p>
+                            UDP è ideale per applicazioni che richiedono bassa latenza e velocità. Poiché non c'è overhead per stabilire e mantenere una connessione, UDP può inviare i pacchetti più rapidamente rispetto a TCP. Tuttavia, la mancanza di controllo sugli errori e l'ordine dei pacchetti significa che è più vulnerabile a perdite di dati e disorganizzazione.
+                        </p>
+                        <p>
+                            Le applicazioni che necessitano di velocità e che tollerano la perdita di alcuni pacchetti, come streaming video, videochiamate, giochi online e sistemi di telefonia (VoIP), si affidano a UDP.
+                        </p>
+                        <p class="card-text"><strong>Caratteristiche principali di UDP:</strong></p>
+                        <ul>
+                            <li><strong>Velocità:</strong> Nessuna connessione preventiva, quindi i dati possono essere inviati immediatamente.</li>
+                            <li><strong>Minore overhead:</strong> Non ci sono meccanismi per il controllo degli errori o la gestione del flusso.</li>
+                            <li><strong>Non affidabile:</strong> I pacchetti possono essere persi, duplicati o arrivare fuori ordine.</li>
+                            <li><strong>Connessione non orientata:</strong> Non viene stabilita alcuna connessione prima dell'invio dei dati.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sezione Tecnica Avanzata -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Dettagli Tecnici Avanzati: TCP vs UDP</h2>
+        <div class="accordion" id="tcpUdpAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="tcpHeader">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#tcpCollapse" aria-expanded="true" aria-controls="tcpCollapse">
+                        TCP: Dettagli Tecnici
+                    </button>
+                </h2>
+                <div id="tcpCollapse" class="accordion-collapse collapse show" aria-labelledby="tcpHeader" data-bs-parent="#tcpUdpAccordion">
+                    <div class="accordion-body">
+                        <p>TCP utilizza un meccanismo di handshake a tre vie per stabilire una connessione sicura tra il client e il server. Questo processo implica i seguenti passaggi:</p>
+                        <ul>
+                            <li><strong>SYN:</strong> Il client invia un pacchetto SYN per avviare la connessione.</li>
+                            <li><strong>SYN-ACK:</strong> Il server risponde con un pacchetto SYN-ACK.</li>
+                            <li><strong>ACK:</strong> Il client invia un pacchetto ACK per confermare la connessione.</li>
+                        </ul>
+                        <p>Una volta stabilita la connessione, i pacchetti vengono inviati e ricevuti con controllo di flusso e gestione della congestione, come ad esempio il meccanismo di ritrasmissione e il controllo di congestione.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="udpHeader">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#udpCollapse" aria-expanded="false" aria-controls="udpCollapse">
+                        UDP: Dettagli Tecnici
+                    </button>
+                </h2>
+                <div id="udpCollapse" class="accordion-collapse collapse" aria-labelledby="udpHeader" data-bs-parent="#tcpUdpAccordion">
+                    <div class="accordion-body">
+                        <p>UDP non prevede alcun processo di connessione. I pacchetti vengono inviati in modo diretto senza alcuna garanzia che vengano ricevuti dal destinatario. La trasmissione è molto più veloce, ma le applicazioni che utilizzano UDP devono essere progettate per gestire eventuali perdite di pacchetti o ritardi.</p>
+                        <p>UDP è utilizzato in situazioni in cui la velocità di trasmissione è più importante della completezza o della sequenzialità dei dati, come ad esempio nelle trasmissioni di video in tempo reale.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div>
+            <p>&copy; 2024 Sito Realizzato da Barbin Andrea. Tutti i diritti riservati. <br><a href="#inizioPagina">Torna su</a></p>
+        </div>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
